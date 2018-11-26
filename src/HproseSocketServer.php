@@ -2,7 +2,7 @@
 
 namespace LumenHprose;
 
-use Hprose\Http\Server;
+use Hprose\Socket\Server;
 
 class HproseSocketServer extends Server
 {
