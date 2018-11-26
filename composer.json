@@ -1,0 +1,31 @@
+{
+    "name": "lumen-hprose",
+    "description": "Hprose for Lumen/Laravel",
+    "keywords": ["hprose", "lumen", "laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lumen",
+            "email": ""
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "hprose/hprose": "v2.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "LumenHprose\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LumenHprose\\ServiceProvider"
+            ],
+            "aliases": {
+                "LaravelHproseRouter": "LumenHprose\\Facades\\Router"
+            }
+        }
+    }
+}
