@@ -139,6 +139,16 @@ class User
     {
         return 'update name: ' . $name;
     }
+    
+    public function getUserById($id)
+    {
+        return [
+            'id'=>$id,
+            'name'=>'lumen',
+            'email'=>'',
+            'url'=>'http://www.lumen.fun',
+        ];
+    }
 }
 ```
 
@@ -161,7 +171,8 @@ $client->userUpdate('lumen');
     $route->add('getUserByName', function ($name) {
         return 'name: ' . $name;
     });
-
+    
+    $route->add('getUserById', 'User@getUserById');
     $route->add('userUpdate', 'User@update');
 });
 ```
@@ -195,5 +206,6 @@ $client->user_update('lumen');
 ```shell
 php artisan hprose:socket_server
 ```
+**更新了路由后需要重新启动服务**
 
 
