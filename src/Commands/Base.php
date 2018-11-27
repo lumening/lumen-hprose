@@ -24,13 +24,13 @@ class Base extends Command
     protected function outputInfo()
     {
         $this->comment('版本:');
-        $this->output->writeln(sprintf(' - Laravel/Lumen=<info>%s<\/>', app()->version()), $this->parseVerbosity(null));
-        $this->output->writeln(sprintf(' - Hprose-php=<info>2.0.0<\/>'), $this->parseVerbosity(null));
+        $this->output->writeln(sprintf(' - Laravel/Lumen=<info>%s</>', app()->version()));
+        $this->output->writeln(sprintf(' - Hprose-php=<info>2.0.0</>'));
         $this->output->newLine();
 
         $this->comment('监听:');
         foreach (config('hprose.uris') as $uri) {
-            $this->line(sprintf(' - <info>%s<\/>', $uri));
+            $this->line(sprintf(' - <info>%s</>', $uri));
         }
         $this->output->newLine();
 
@@ -38,11 +38,11 @@ class Base extends Command
         $methods = \LumenHproseRouter::getMethods();
         if ($methods) {
             foreach ($methods as $method) {
-                $this->line(sprintf(' - <info>%s<\/>', $method));
+                $this->line(sprintf(' - <info>%s</>', $method));
             }
             $this->output->newLine();
         } else {
-            $this->line(sprintf(' - <info>无可调用方法<\/>'));
+            $this->line(sprintf(' - <info>无可调用方法</>'));
         }
     }
 }
