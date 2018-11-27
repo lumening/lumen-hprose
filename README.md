@@ -12,6 +12,13 @@ Laravel>=5.2
 ```
 
 ## 安装
+
+直接使用
+```shell
+composer require lumening/lumen-hprose
+```
+
+如果上面不行，那么
 编辑composer.json
 ```json
 "repositories": [
@@ -23,7 +30,7 @@ Laravel>=5.2
 ```
 然后执行
 ```shell
-composer require "lumen-hprose"
+composer require "lumening/lumen-hprose"
 ```
 
 ## 使用**laravel**配置
