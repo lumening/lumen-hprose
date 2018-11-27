@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "LumenHprose\\": "src/"
+            "Lumening\\LumenHprose\\": "src/"
         }
     },
     "extra": {
