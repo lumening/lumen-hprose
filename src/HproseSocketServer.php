@@ -1,6 +1,6 @@
 <?php
 
-namespace LumenHprose;
+namespace Lumening\LumenHprose;
 
 use Hprose\Socket\Server;
 

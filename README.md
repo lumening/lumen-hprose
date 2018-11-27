@@ -32,14 +32,14 @@ composer require "lumen-hprose"
     'providers' => [
         // ...
 
-       LumenHprose\ServiceProvider::class,
+       Lumening\LumenHprose\ServiceProvider::class,
     ]
     ```
     ```php
     'aliases' => [
         // ...
 
-         'LumenHproseRouter'=>LumenHprose\Facades\Router::class,
+         'LumenHproseRouter'=>Lumening\LumenHprose\Facades\Router::class,
     ]
     ```
 2. 配置.env文件
@@ -56,7 +56,7 @@ composer require "lumen-hprose"
 
 3. 创建`配置`和`路由`文件：
     ```shell
-    php artisan vendor:publish --provider="LumenHprose\ServiceProvider"
+    php artisan vendor:publish --provider="Lumening\LumenHprose\ServiceProvider"
     ```
     >应用根目录下的`config`目录下会自动生成新文件`hprose.php`
     >
@@ -65,12 +65,12 @@ composer require "lumen-hprose"
 ## 使用**lumen**配置
 1. 在 bootstrap/app.php 注册 ServiceProvider 和 Facade
     ```php
-       $app->register(LumenHprose\ServiceProvider::class);
+       $app->register(Lumening\LumenHprose\ServiceProvider::class);
     ```
     ```php
         $app->withFacades(true, [
             // ...
-            'LumenHprose\Facades\Router' => 'LumenHproseRouter',
+            'Lumening\LumenHprose\Facades\Router' => 'LumenHproseRouter',
         ]);
     ```
 2. 在 app/Console/Kernel.php 添加 vendor publish
@@ -94,7 +94,7 @@ composer require "lumen-hprose"
 
 4. 创建`配置`和`路由`文件：
     ```shell
-    php artisan vendor:publish --provider="LumenHprose\ServiceProvider"
+    php artisan vendor:publish --provider="Lumening\LumenHprose\ServiceProvider"
     ```
     >应用根目录下的`config`目录下会自动生成新文件`hprose.php`
     >

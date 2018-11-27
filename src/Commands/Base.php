@@ -1,6 +1,6 @@
 <?php
 
-namespace LumenHprose\Commands;
+namespace Lumening\LumenHprose\Commands;
 
 use Illuminate\Console\Command;
 

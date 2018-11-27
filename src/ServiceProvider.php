@@ -1,9 +1,9 @@
 <?php
 
-namespace LumenHprose;
+namespace Lumening\LumenHprose;
 
 use Illuminate\Support\ServiceProvider as LumenServiceProvider;
-use LumenHprose\Routing\Router;
+use Lumening\LumenHprose\Routing\Router;
 
 class ServiceProvider extends LumenServiceProvider
 {

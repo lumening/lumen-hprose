@@ -1,12 +1,12 @@
 {
-    "name": "lumen-hprose",
+    "name": "lumening/lumen-hprose",
     "description": "Hprose for Lumen/Laravel",
     "keywords": ["hprose", "lumen", "laravel"],
     "license": "MIT",
     "authors": [
         {
             "name": "lumen",
-            "email": ""
+            "email": "269547130@qq.com"
         }
     ],
     "require": {
@@ -22,10 +22,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LumenHprose\\ServiceProvider"
+                "Lumening\\LumenHprose\\ServiceProvider"
             ],
             "aliases": {
-                "LaravelHproseRouter": "LumenHprose\\Facades\\Router"
+                "LaravelHproseRouter": "Lumening\\LumenHprose\\Facades\\Router"
             }
         }
     }

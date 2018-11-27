@@ -1,6 +1,6 @@
 <?php
 
-namespace LumenHprose\Routing;
+namespace Lumening\LumenHprose\Routing;
 
 class Router
 {

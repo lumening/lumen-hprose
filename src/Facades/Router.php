@@ -1,6 +1,6 @@
 <?php
 
-namespace LumenHprose\Facades;
+namespace Lumening\LumenHprose\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
