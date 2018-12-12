@@ -208,6 +208,18 @@ $client->user_getByName('lumen');
 $client->user_update('lumen');
 ```
 
+如果服务端出现 exception ，因为hprose 没有返回code(已经和开发者确认)，需要将code 合并到message用json方式包裹返回
+```php
+try{
+    $client->user->getByName('lumen');
+}catch(\Exception $e){
+    $info = json_decode($e->getMessage(),true);
+    $message = $info['message'];
+    $code = $info['code'];
+}
+
+```
+
 ### 启动服务
 
 ```shell

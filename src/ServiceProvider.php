@@ -101,6 +101,11 @@ class ServiceProvider extends LumenServiceProvider
         $this->app->singleton('hprose.socket_server', function ($app) {
             $server = new HproseSocketServer();
 
+            $server->onSendError = function ($error, \stdClass $context) {
+                $message = json_encode(['message' => $error->getMessage(), 'code' => $error->getCode()]);
+                throw new \Exception($message, $error->getCode());
+            };
+
             $uris = config('hprose.uris');
 
             if (!is_array($uris)) {
